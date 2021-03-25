@@ -1,0 +1,79 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+[x-cloak] { display: none; }
+
+button:focus,
+select:focus {
+    outline: none;
+}
+
+.clamp {
+    --clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: var(--clamp);
+}
+.clamp-2 { --clamp: 2; }
+.clamp-3 { --clamp: 3; }
+.clamp-4 { --clamp: 4; }
+.clamp-5 { --clamp: 5; }
+
+/* Remove number input step arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Range Slider Thumb */
+.slider::-webkit-slider-thumb {
+    appearance: none; -webkit-appearance: none;
+    width: 40px; height: 2rem; border: 0;
+    transform: translateY(-70%);
+    background: url('/img/icons/slider.svg') no-repeat center / contain;
+}
+.slider::-moz-range-thumb {
+    width: 40px; height: 2rem; border: 0;
+    transform: translateY(-70%);
+    background: url('/img/icons/slider.svg') no-repeat center / contain;
+}
+
+/* Background Blur */
+.blur {
+    --blur: 10px;
+    backdrop-filter:blur(var(--blur));
+}
+.blur-light { --blur: 5px; }
+.blur-heavy { --blur: 20px; }
+
+.filter-grayscale {
+    --grayscale: 1;
+    filter: grayscale(var(--grayscale));
+}
+
+
+
+
+
+
+/* Remove transitions from touch devices' buttons/links */
+@media (hover: none) and (pointer: coarse) {
+    .tap-safe {
+        transition: none !important;
+    }
+}
