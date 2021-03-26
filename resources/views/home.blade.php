@@ -1,21 +1,21 @@
-<x-layout>
-    <script>
-        // document.getElementById('themeSwitch').addEventListener('change', function(event){
-        //     (event.target.checked)
-        //         ? document.body.setAttribute('data-theme', 'dark')
-        //         : document.body.removeAttribute('data-theme');
-        // });
-
-        function darkThemeToggle(isDarkMode) {
-            return (isDarkMode)
-                ? document.body.setAttribute('data-theme', 'dark')
-                : document.body.removeAttribute('data-theme');
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>
+    WebFont.load({
+        google: {
+            families: ['Montserrat:400,700']
         }
-    </script>
-    <div x-data="{ darkMode: true }" class="">
-        theme toggle button:
-        <button x-text="(darkMode) ? 'Light-Mode' : 'Dark-Mode'" x-on:click="darkMode = !darkMode; darkThemeToggle(darkMode)"
-            class="flex p-3 mt-5 text-gray-800 rounded shadow bg-pink-50"></button>
-    </div>
+    });
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes</title>
+<link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-</x-layout>
+<body class="flex flex-col font-sans dark:bg-gray-800 dark:text-white">
+
+    <main class="flex-1 p-10 prose">
+        hi
+    </main>
+</body>
