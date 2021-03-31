@@ -15,7 +15,14 @@
 
 <body class="flex flex-col font-sans dark:bg-gray-800 dark:text-white">
 
-    <main class="flex-1 p-10 prose">
-        hi
+    <main class="grid flex-1 grid-cols-2 p-10 prose">
+            <div class="flex flex-col">
+            @foreach ($notes as $note)
+                <button wire:click class="mt-10 focus:bg-pink-500">{{ $note->title }}</button>
+            @endforeach
+            </div>
+            <div>
+                
+            </div>
     </main>
 </body>

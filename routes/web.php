@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $notes = App\Models\Note::all();
+    return view('home', ['notes'=>$notes]);
 });
