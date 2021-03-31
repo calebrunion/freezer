@@ -11,6 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Notes</title>
 <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
+@livewireStyles
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 <body class="flex flex-col font-sans dark:bg-gray-800 dark:text-white">
@@ -22,7 +23,8 @@
             @endforeach
             </div>
             <div>
-                
+
             </div>
     </main>
+    @livewireScripts
 </body>
