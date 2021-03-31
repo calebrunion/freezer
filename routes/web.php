@@ -17,3 +17,6 @@ Route::get('/', function () {
     $notes = App\Models\Note::all();
     return view('home', ['notes'=>$notes]);
 });
+
+
+Route::get('/note', \App\Http\Livewire\NoteList::class);
